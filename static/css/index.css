@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #f1f1f1;
+}
+
+.title {
+	text-align: center;
+	font-size: 4rem;
+	color: #1d88ab;
+	font-family: 'PT Serif', 'Times New Roman', Times, serif;
+}
+
+.sottotitolo {
+	text-align: center;
+	font-size: 3rem;
+	color: #187391;
+	margin-top: 1rem;
+	font-family: 'PT Serif', 'Times New Roman', Times, serif;
+}
+
+.question {
+	margin: 0 10rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+form {
+	text-align: center;
+	margin-top: 2.5rem;
+}
+
+.answers {
+	/*display: flex;
+	justify-content: center;*/
+	text-align: left;
+	margin-top: 1.4rem;
+	font-family: 'Dosis', calibri, sans-serif;
+	font-weight: 900;
+}
+
+#text {
+	font-size: 2rem;
+	color: #5c1dab;
+	font-family: 'Arvo', 'Times New Roman', Times, serif;
+}
+
+label {
+	font-size: 1.5rem;
+	color: #145f78;
+}
+
+input[type='radio'] {
+	accent-color: #ab401d;
+}
+
+.answer:nth-child(2) {
+	margin-top: 0.8rem;
+	margin-bottom: 0.8rem;
+}
+
+button {
+	height: 5rem;
+	width: 12rem;
+	border: 0;
+	border-radius: 0.5rem;
+	background-color: #1d88ab;
+	margin-top: 1.4rem;
+	font-size: 2rem;
+	color: #ab401d;
+	font-family: 'Arvo', 'Times New Roman', Times, serif;
+}
