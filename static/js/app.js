@@ -6,36 +6,19 @@ var piatti = [
 		valore: '30',
 	},
 	{
-		nome: 'Sgagliozza',
+		nome: 'Pasticciotto',
 		foto: 'https://blog.giallozafferano.it/fablesucre/wp-content/uploads/2020/09/Blog_IMG_0390-scaled.jpg',
-		descrizione: 'Sei una sgagliozza',
+		descrizione: 'Sei un pasticciotto',
 		valore: '50',
 	},
 	{
-		nome: 'Puccia',
+		nome: 'Cartellata',
 		foto: 'https://staticcookist.akamaized.net/wp-content/uploads/sites/21/2022/06/Puccia-salentina-1200x675.jpg',
-		descrizione: 'Sei una puccia',
+		descrizione: 'Sei una cartellata',
 		valore: '70',
 	},
 ];
 var questions = [
-	{
-		question: 'Quale di questi piatti ti piace di più?',
-		answers: [
-			{
-				answer: 'Popizze',
-				value: 100,
-			},
-			{
-				answer: 'Sgagliozza',
-				value: 50,
-			},
-			{
-				answer: 'Puccia',
-				value: 30,
-			},
-		],
-	},
 	{
 		question: 'La mattina sei...',
 		answers: [
@@ -44,11 +27,11 @@ var questions = [
 				value: 10,
 			},
 			{
-				answer: 'Perennemente in anticipo',
+				answer: 'Perfettamente in orario',
 				value: 10,
 			},
 			{
-				answer: 'Perfettamente in orario',
+				answer: 'Perennemente in anticipo',
 				value: 10,
 			},
 		],
@@ -61,11 +44,62 @@ var questions = [
 				value: 10,
 			},
 			{
-				answer: 'Un bicchiere di vino',
+				answer: 'Acqua, rigorosamente',
 				value: 10,
 			},
 			{
-				answer: 'Acqua, rigorosamente',
+				answer: 'Un bicchiere di vino',
+				value: 10,
+			},
+		],
+	},
+	{
+		question: 'Se fai uno spuntino, cosa preferisci?',
+		answers: [
+			{
+				answer: 'Fritto',
+				value: 10,
+			},
+			{
+				answer: 'Dolce',
+				value: 10,
+			},
+			{
+				answer: 'Salato',
+				value: 10,
+			},
+		],
+	},
+	{
+		question: 'Sei più un tipo da...',
+		answers: [
+			{
+				answer: 'Caffè',
+				value: 10,
+			},
+			{
+				answer: 'Amaro',
+				value: 10,
+			},
+			{
+				answer: 'Grappa',
+				value: 10,
+			},
+		],
+	},
+	{
+		question: 'Che tipo di musica ascolti?',
+		answers: [
+			{
+				answer: 'Rock',
+				value: 10,
+			},
+			{
+				answer: 'Musica leggera',
+				value: 10,
+			},
+			{
+				answer: 'Jazz',
 				value: 10,
 			},
 		],
@@ -81,14 +115,8 @@ avanti.addEventListener('click', function (event) {
 });
 
 let attuale = 0;
-var question = questions[attuale];
+let question = questions[attuale];
 showQuestion(question);
-
-/*avanti.addEventListener('click', function (event) {
-	event.preventDefault();
-	question = questions[attuale++];
-	showQuestion(question);
-});*/
 
 function showQuestion(question) {
 	var answers = question.answers;
