@@ -24,58 +24,55 @@ var questions = [
 		answers: [
 			{
 				answer: 'Popizze',
-				value: 10,
+				value: 100,
 			},
 			{
 				answer: 'Sgagliozza',
-				value: 10,
+				value: 50,
 			},
 			{
 				answer: 'Puccia',
+				value: 30,
+			},
+		],
+	},
+	{
+		question: 'La mattina sei...',
+		answers: [
+			{
+				answer: 'Perennemente in ritardo',
+				value: 10,
+			},
+			{
+				answer: 'Perennemente in anticipo',
+				value: 10,
+			},
+			{
+				answer: 'Perfettamente in orario',
 				value: 10,
 			},
 		],
 	},
 	{
-		question: 'Quale dovrebbe essere la prossima domanda?',
+		question: 'Quando mangi, che bibita preferisci?',
 		answers: [
 			{
-				answer: 'Popizze',
+				answer: 'Una birra fresca',
 				value: 10,
 			},
 			{
-				answer: 'Sgagliozza',
+				answer: 'Un bicchiere di vino',
 				value: 10,
 			},
 			{
-				answer: 'Puccia',
-				value: 10,
-			},
-		],
-	},
-	{
-		question: 'Quale dovrebbe essere la prossima domanda?',
-		answers: [
-			{
-				answer: 'Popizze',
-				value: 10,
-			},
-			{
-				answer: 'Sgagliozza',
-				value: 10,
-			},
-			{
-				answer: 'Puccia',
+				answer: 'Acqua, rigorosamente',
 				value: 10,
 			},
 		],
 	},
 ];
-var avanti = document.querySelector('#avanti');
 
-let attuale = 0;
-var question = questions[attuale];
-showQuestion(question);
+var avanti = document.querySelector('#avanti');
 
 avanti.addEventListener('click', function (event) {
 	event.preventDefault();
@@ -83,15 +80,27 @@ avanti.addEventListener('click', function (event) {
 	showQuestion(question);
 });
 
+let attuale = 0;
+var question = questions[attuale];
+showQuestion(question);
+
+/*avanti.addEventListener('click', function (event) {
+	event.preventDefault();
+	question = questions[attuale++];
+	showQuestion(question);
+});*/
+
 function showQuestion(question) {
 	var answers = question.answers;
-	document.querySelector('text').innerText = question.question;
+	document.querySelector('#text').innerText = question.question;
 	for (let i = 0; i < answers.length; i++) {
 		const answer = answers[i];
-		document.querySelector(`label[for="question-${i + 1}"]`).innerText = answer.answer;
+		document.querySelector(`#label-${i + 1}`).innerText = answer.answer;
 		//document.querySelector(`label[for="question-${i+1}"]`).setAttribute('value', answer.value);
-		document.querySelector(`label[for="question-${i + 1}"]`).value = answer.value;
+		document.querySelector(`#label-${i + 1}`).value = answer.value;
 	}
-	document.getElementById('question').innerHTML = question.question;
-	document.getElementById('answers').innerHTML = answersHtml;
+	if (attuale == questions.length - 1) {
+		avanti.innerText = 'Vai al risultato';
+		avanti.type = 'submit';
+	}
 }
