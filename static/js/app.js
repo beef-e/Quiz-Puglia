@@ -114,13 +114,16 @@ let attuale = 0;
 let question = questions[attuale];
 showQuestion(question);
 
-avanti.addEventListener('click', function (event) {
+function clickClbk(event) {
+	console.log('avanti');
 	event.preventDefault();
 	score = score + parseInt(document.querySelector('input[name="question-1"]:checked').value);
 	attuale++;
 	question = questions[attuale];
 	showQuestion(question);
-});
+}
+
+avanti.addEventListener('click', clickClbk);
 
 function showQuestion(question) {
 	var answers = question.answers;
@@ -137,7 +140,36 @@ function showQuestion(question) {
 	if (attuale == questions.length - 1) {
 		avanti.innerText = 'Vai al risultato';
 		avanti.type = 'submit';
+		avanti.removeEventListener('click', clickClbk);
 	}
 }
 
+document.querySelector('form').addEventListener('submit', function (event) {
+	console.log('submit');
+	event.preventDefault();
+	distanza();
+});
+
 //una volta che ho risposto alle domande prendo i punteggi dei singoli risultati e calcola la distanza euclidea fra il punteggio e i vari possibili risultati
+
+function distanza() {
+	let distanza_1 = piatti[0].valore - score;
+	let distanza_2 = piatti[1].valore - score;
+	let distanza_3 = piatti[2].valore - score;
+
+	let minimo = Math.min(distanza_1, distanza_2, distanza_3);
+
+	if (minimo == distanza_1) {
+		showResult(piatti[0]);
+	} else if (minimo == distanza_2) {
+		showResult(piatti[1]);
+	} else {
+		showResult(piatti[2]);
+	}
+}
+
+function showResult(piatto) {
+	document.querySelector('form').style.display = 'none';
+	document.querySelector('.nomePlate').innerText = piatto.nome;
+	document.querySelector('.description').innerText = piatto.descrizione;
+}
