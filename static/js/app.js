@@ -1,3 +1,5 @@
+let score = 50;
+
 var piatti = [
 	{
 		nome: 'Popizze',
@@ -24,15 +26,15 @@ var questions = [
 		answers: [
 			{
 				answer: 'Perennemente in ritardo',
-				value: 10,
+				value: -5,
 			},
 			{
 				answer: 'Perfettamente in orario',
-				value: 10,
+				value: 0,
 			},
 			{
 				answer: 'Perennemente in anticipo',
-				value: 10,
+				value: 5,
 			},
 		],
 	},
@@ -41,15 +43,15 @@ var questions = [
 		answers: [
 			{
 				answer: 'Una birra fresca',
-				value: 10,
+				value: -5,
 			},
 			{
 				answer: 'Acqua, rigorosamente',
-				value: 10,
+				value: 0,
 			},
 			{
 				answer: 'Un bicchiere di vino',
-				value: 10,
+				value: 5,
 			},
 		],
 	},
@@ -58,15 +60,15 @@ var questions = [
 		answers: [
 			{
 				answer: 'Fritto',
-				value: 10,
+				value: -5,
 			},
 			{
 				answer: 'Dolce',
-				value: 10,
+				value: 0,
 			},
 			{
 				answer: 'Salato',
-				value: 10,
+				value: 5,
 			},
 		],
 	},
@@ -75,15 +77,15 @@ var questions = [
 		answers: [
 			{
 				answer: 'Caffè',
-				value: 10,
+				value: -5,
 			},
 			{
 				answer: 'Amaro',
-				value: 10,
+				value: 0,
 			},
 			{
 				answer: 'Grappa',
-				value: 10,
+				value: 5,
 			},
 		],
 	},
@@ -92,15 +94,15 @@ var questions = [
 		answers: [
 			{
 				answer: 'Rock',
-				value: 10,
+				value: -5,
 			},
 			{
 				answer: 'Musica leggera',
-				value: 10,
+				value: 0,
 			},
 			{
 				answer: 'Jazz',
-				value: 10,
+				value: 5,
 			},
 		],
 	},
@@ -108,15 +110,17 @@ var questions = [
 
 var avanti = document.querySelector('#avanti');
 
-avanti.addEventListener('click', function (event) {
-	event.preventDefault();
-	question = questions[attuale++];
-	showQuestion(question);
-});
-
 let attuale = 0;
 let question = questions[attuale];
 showQuestion(question);
+
+avanti.addEventListener('click', function (event) {
+	event.preventDefault();
+	score = score + parseInt(document.querySelector('input[name="question-1"]:checked').value);
+	attuale++;
+	question = questions[attuale];
+	showQuestion(question);
+});
 
 function showQuestion(question) {
 	var answers = question.answers;
@@ -125,10 +129,15 @@ function showQuestion(question) {
 		const answer = answers[i];
 		document.querySelector(`#label-${i + 1}`).innerText = answer.answer;
 		//document.querySelector(`label[for="question-${i+1}"]`).setAttribute('value', answer.value);
-		document.querySelector(`#label-${i + 1}`).value = answer.value;
+		document.querySelector(`#answer-${i + 1}`).value = answer.value;
+	}
+	for (let i = 0; i < document.querySelectorAll(`input[name="question-1"]`).length; i++) {
+		document.querySelectorAll(`input[name="question-1"]`)[i].checked = false;
 	}
 	if (attuale == questions.length - 1) {
 		avanti.innerText = 'Vai al risultato';
 		avanti.type = 'submit';
 	}
 }
+
+//una volta che ho risposto alle domande prendo i punteggi dei singoli risultati e calcola la distanza euclidea fra il punteggio e i vari possibili risultati
