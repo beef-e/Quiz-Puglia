@@ -80,3 +80,28 @@ button {
 	color: #ab401d;
 	font-family: 'Arvo', 'Times New Roman', Times, serif;
 }
+
+.container {
+	text-align: center;
+}
+
+#imgPlate {
+	max-width: 30%;
+	max-height: 30%;
+	margin-top: 80px;
+	border-radius: 5%;
+}
+
+.nomePlate {
+	font-size: 4rem;
+	color: #5c1dab;
+	font-family: 'Arvo', 'Times New Roman', Times, serif;
+	margin-top: 40px;
+}
+
+.description {
+	font-size: 2rem;
+	color: #145f78;
+	font-family: 'Arvo', 'Times New Roman', Times, serif;
+	margin-top: 20px;
+}

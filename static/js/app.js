@@ -159,9 +159,9 @@ function distanza() {
 
 	let minimo = Math.min(distanza_1, distanza_2, distanza_3);
 
-	if (minimo == distanza_1) {
+	if (minimo === distanza_1) {
 		showResult(piatti[0]);
-	} else if (minimo == distanza_2) {
+	} else if (minimo === distanza_2) {
 		showResult(piatti[1]);
 	} else {
 		showResult(piatti[2]);
@@ -172,4 +172,5 @@ function showResult(piatto) {
 	document.querySelector('form').style.display = 'none';
 	document.querySelector('.nomePlate').innerText = piatto.nome;
 	document.querySelector('.description').innerText = piatto.descrizione;
+	document.querySelector('#imgPlate').src = piatto.foto;
 }
