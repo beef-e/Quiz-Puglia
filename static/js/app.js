@@ -153,9 +153,9 @@ document.querySelector('form').addEventListener('submit', function (event) {
 //una volta che ho risposto alle domande prendo i punteggi dei singoli risultati e calcola la distanza euclidea fra il punteggio e i vari possibili risultati
 
 function distanza() {
-	let distanza_1 = piatti[0].valore - score;
-	let distanza_2 = piatti[1].valore - score;
-	let distanza_3 = piatti[2].valore - score;
+	let distanza_1 = Math.abs(parseInt(piatti[0].valore) - score);
+	let distanza_2 = Math.abs(parseInt(piatti[1].valore) - score);
+	let distanza_3 = Math.abs(parseInt(piatti[2].valore) - score);
 
 	let minimo = Math.min(distanza_1, distanza_2, distanza_3);
 
