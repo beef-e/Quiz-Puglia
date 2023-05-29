@@ -4,19 +4,22 @@ var piatti = [
 	{
 		nome: 'Popizze',
 		foto: 'https://www.pugliainesclusiva.it/puglia/wp-content/uploads/2016/08/popizze-fritte-3.jpg',
-		descrizione: 'Sei una popizza',
+		sottotitolo: 'Sei una popizza',
+		descrizione: `Le Popizze sono persone estremamente affascinanti e glamour, sempre al passo con le ultime tendenze. Sono sicure di sé e attirano l'attenzione ovunque vadano. Con un atteggiamento spavaldo e una personalità che fa risaltare la loro bellezza, le Popizze sanno come farsi notare e ammirare. Sono abili nel creare una rete di contatti e circondarsi di persone altrettanto affascinanti. Amanti dell'abbondanza e dei lussi, le Popizze non si accontentano di meno. Sono sempre alla ricerca delle ultime novità e non esitano a mettersi in mostra. Sei sicuro di voler entrare nel loro mondo glamour?`,
 		valore: '30',
 	},
 	{
 		nome: 'Pasticciotto',
 		foto: 'https://wips.plug.it/cips/buonissimo.org/cms/2019/07/guarnire-pasticciotto-leccese.jpg',
-		descrizione: 'Sei un pasticciotto',
+		sottotitolo: 'Sei un pasticciotto',
+		descrizione: `I Pasticciotti sono persone che si distinguono per la loro creatività e per la loro naturale inclinazione all'arte e all'espressione artistica. Sono dotati di una fervida immaginazione e sanno come trasformare anche la situazione più caotica in un'opera d'arte. Sono abili nel trovare soluzioni innovative e nel mettere in pratica idee originali. I Pasticciotti sono spesso impegnati in progetti artistici che li portano a sperimentare nuove forme di espressione. Anche se possono sembrare un po' disordinati e imprevedibili, sono in realtà delle menti geniali che sanno come portare una ventata di freschezza ovunque vadano. Sei pronto a immergerti nel loro universo creativo?`,
 		valore: '50',
 	},
 	{
 		nome: 'Cartellata',
 		foto: 'https://i.pinimg.com/736x/b3/03/b8/b303b8385e8dfb77730de6452fbe8a27.jpg',
-		descrizione: 'Sei una cartellata',
+		sottotitolo: 'Sei una cartellata',
+		descrizione: `Le Cartellate sono persone estremamente tradizionali e attaccate alle loro radici. Sono molto legate alla loro famiglia e alla loro comunità, e danno grande importanza alle tradizioni e ai valori trasmessi da generazioni. Le Cartellate sono conosciute per la loro ospitalità e generosità, sono sempre pronte ad accogliere e coccolare chiunque entri nella loro vita. Sono maestri nell'arte della cucina tradizionale e delle ricette tramandate. Sanno come creare piatti deliziosi che riflettono la loro cultura e la loro identità. Le Cartellate amano trascorrere il tempo con le persone a loro care e sono sempre pronte a condividere una buona risata e una prelibatezza culinaria. Sei pronto a immergerti nell'accogliente mondo delle Cartellate?`,
 		valore: '70',
 	},
 ];
@@ -171,6 +174,7 @@ function distanza() {
 function showResult(piatto) {
 	document.querySelector('form').style.display = 'none';
 	document.querySelector('.nomePlate').innerText = piatto.nome;
+	document.querySelector('.underTitle').innerText = piatto.sottotitolo;
 	document.querySelector('.description').innerText = piatto.descrizione;
 	document.querySelector('#imgPlate').src = piatto.foto;
 }

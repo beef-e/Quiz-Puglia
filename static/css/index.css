@@ -88,7 +88,7 @@ button {
 #imgPlate {
 	max-width: 30%;
 	max-height: 30%;
-	margin-top: 80px;
+	margin-top: 40px;
 	border-radius: 5%;
 }
 
@@ -96,12 +96,21 @@ button {
 	font-size: 4rem;
 	color: #5c1dab;
 	font-family: 'Arvo', 'Times New Roman', Times, serif;
-	margin-top: 40px;
+	margin-top: 25px;
 }
 
-.description {
+.underTitle {
 	font-size: 2rem;
 	color: #145f78;
 	font-family: 'Arvo', 'Times New Roman', Times, serif;
-	margin-top: 20px;
+	margin-top: 15px;
+}
+
+.description {
+	font-size: 1.5rem;
+	/*color: #145f78;*/
+	font-family: 'Arvo', 'Times New Roman', Times, serif;
+	margin-top: 15px;
+	margin-left: 10vw;
+	margin-right: 10vw;
 }
