@@ -9,13 +9,13 @@ var piatti = [
 	},
 	{
 		nome: 'Pasticciotto',
-		foto: 'https://blog.giallozafferano.it/fablesucre/wp-content/uploads/2020/09/Blog_IMG_0390-scaled.jpg',
+		foto: 'https://wips.plug.it/cips/buonissimo.org/cms/2019/07/guarnire-pasticciotto-leccese.jpg',
 		descrizione: 'Sei un pasticciotto',
 		valore: '50',
 	},
 	{
 		nome: 'Cartellata',
-		foto: 'https://staticcookist.akamaized.net/wp-content/uploads/sites/21/2022/06/Puccia-salentina-1200x675.jpg',
+		foto: 'https://i.pinimg.com/736x/b3/03/b8/b303b8385e8dfb77730de6452fbe8a27.jpg',
 		descrizione: 'Sei una cartellata',
 		valore: '70',
 	},
