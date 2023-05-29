@@ -1,4 +1,4 @@
-let score = 50;
+let score = 10;
 
 var piatti = [
 	{
@@ -29,7 +29,7 @@ var questions = [
 		answers: [
 			{
 				answer: 'Perennemente in ritardo',
-				value: -5,
+				value: -10,
 			},
 			{
 				answer: 'Perfettamente in orario',
@@ -37,7 +37,7 @@ var questions = [
 			},
 			{
 				answer: 'Perennemente in anticipo',
-				value: 5,
+				value: 10,
 			},
 		],
 	},
@@ -46,7 +46,7 @@ var questions = [
 		answers: [
 			{
 				answer: 'Una birra fresca',
-				value: -5,
+				value: -10,
 			},
 			{
 				answer: 'Acqua, rigorosamente',
@@ -54,7 +54,7 @@ var questions = [
 			},
 			{
 				answer: 'Un bicchiere di vino',
-				value: 5,
+				value: 10,
 			},
 		],
 	},
@@ -63,7 +63,7 @@ var questions = [
 		answers: [
 			{
 				answer: 'Fritto',
-				value: -5,
+				value: -10,
 			},
 			{
 				answer: 'Dolce',
@@ -71,7 +71,7 @@ var questions = [
 			},
 			{
 				answer: 'Salato',
-				value: 5,
+				value: 10,
 			},
 		],
 	},
@@ -80,7 +80,7 @@ var questions = [
 		answers: [
 			{
 				answer: 'Caffè',
-				value: -5,
+				value: -10,
 			},
 			{
 				answer: 'Amaro',
@@ -88,7 +88,7 @@ var questions = [
 			},
 			{
 				answer: 'Grappa',
-				value: 5,
+				value: 10,
 			},
 		],
 	},
@@ -97,7 +97,7 @@ var questions = [
 		answers: [
 			{
 				answer: 'Rock',
-				value: -5,
+				value: -10,
 			},
 			{
 				answer: 'Musica leggera',
@@ -105,7 +105,7 @@ var questions = [
 			},
 			{
 				answer: 'Jazz',
-				value: 5,
+				value: 10,
 			},
 		],
 	},
